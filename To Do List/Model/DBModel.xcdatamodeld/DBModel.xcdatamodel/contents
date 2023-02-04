@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="List" representedClassName=".List" syncable="YES" codeGenerationType="class">
+        <attribute name="isCheck" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="item" optional="YES" attributeType="String"/>
+        <relationship name="categoryRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NKCategory" inverseName="listRelationship" inverseEntity="NKCategory"/>
+    </entity>
+    <entity name="NKCategory" representedClassName=".NKCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="listRelationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="List" inverseName="categoryRelationship" inverseEntity="List"/>
+    </entity>
+    <elements>
+        <element name="List" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="NKCategory" positionX="-359.4057312011719" positionY="-125.1417846679688" width="128" height="73"/>
+    </elements>
+</model>
